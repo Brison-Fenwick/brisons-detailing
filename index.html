@@ -79,9 +79,9 @@ footer {
   <button class="cta-btn" onclick="window.location.href='sms:8156151025'">Text to Book</button>
 </section><section id="services" class="section">
   <div class="buttons">
-    <button class="service-btn" onclick="showDetails('inside')">Inside - $50</button>
-    <button class="service-btn" onclick="showDetails('outside')">Outside - $60</button>
-    <button class="service-btn" onclick="showDetails('full')">Full - $100</button>
+    <button class="service-btn" onclick="showDetails('inside')">Inside - $40</button>
+    <button class="service-btn" onclick="showDetails('outside')">Outside - $50</button>
+    <button class="service-btn" onclick="showDetails('full')">Full - $80</button>
   </div>  <div id="details" class="details">
     <p>Select a service to see details.</p>
   </div>
@@ -99,7 +99,7 @@ function showDetails(type) {
 
   if (type === 'inside') {
     box.innerHTML = `
-      <h3>Inside Detail - $50 ($30 first 3 visits)</h3>
+      <h3>Inside Detail - $40 ($20 first 3 visits)</h3>
       <p>✔ Vacuuming<br>
       ✔ Window Cleaning<br>
       ✔ Dashboard & Surfaces Cleaned<br>
@@ -111,7 +111,7 @@ function showDetails(type) {
 
   if (type === 'outside') {
     box.innerHTML = `
-      <h3>Outside Detail - $60 ($40 first 3 visits)</h3>
+      <h3>Outside Detail - $50 ($30 first 3 visits)</h3>
       <p>✔ Car Washed by Hand<br>
       ✔ Hand Dry (Shammy)<br>
       ✔ Rims & Tires Scrubbed<br>
@@ -125,7 +125,7 @@ function showDetails(type) {
 
   if (type === 'full') {
     box.innerHTML = `
-      <h3>Full Detail - $100 ($80 first 3 visits)</h3>
+      <h3>Full Detail - $80 ($60 first 3 visits)</h3>
       <p>✔ Complete Interior + Exterior Detail<br>
       ✔ Best Value Package<br>
       ✔ Makes your car look like new</p>
