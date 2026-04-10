@@ -75,7 +75,7 @@ footer {
   <h2>Premium Car Detailing</h2>
   <p>Professional results. Affordable prices. Sublette, Illinois.</p>
   <p style="color:gold; font-weight:bold; margin-top:10px;">⭐ 5-Star Service • Highly Recommended</p>
-  <p style="color:#00ffcc; font-weight:bold; margin-top:5px;">🔥 First 3 Customers Get $20 OFF 🔥</p>
+  <p style="color:#00ffcc; font-weight:bold; margin-top:5px;">🔥 First 3 Visits (Per Customer) Get $20 OFF 🔥</p>
   <button class="cta-btn" onclick="window.location.href='sms:8156151025'">Text to Book</button>
 </section><section id="services" class="section">
   <div class="buttons">
@@ -87,7 +87,7 @@ footer {
   </div>
 </section><section id="contact" class="section contact">
   <h3>Contact</h3>
-  <p>📍 378 Van Orin Road, Sublette, Illinois 61367</p>
+  <p>📍 Sublette, Illinois 61367</p>
   <p>📞 <a href="tel:8156151025">815-615-1025</a></p>
   <p>📧 <a href="mailto:brison.fenwick.12@gmail.com">brison.fenwick.12@gmail.com</a></p>
   <button class="cta-btn" onclick="window.location.href='sms:8156151025'">Book Now</button>
@@ -99,7 +99,7 @@ function showDetails(type) {
 
   if (type === 'inside') {
     box.innerHTML = `
-      <h3>Inside Detail - $50</h3>
+      <h3>Inside Detail - $50 ($30 first 3 visits)</h3>
       <p>✔ Vacuuming<br>
       ✔ Window Cleaning<br>
       ✔ Dashboard & Surfaces Cleaned<br>
@@ -111,7 +111,7 @@ function showDetails(type) {
 
   if (type === 'outside') {
     box.innerHTML = `
-      <h3>Outside Detail - $60</h3>
+      <h3>Outside Detail - $60 ($40 first 3 visits)</h3>
       <p>✔ Car Washed by Hand<br>
       ✔ Hand Dry (Shammy)<br>
       ✔ Rims & Tires Scrubbed<br>
@@ -125,7 +125,7 @@ function showDetails(type) {
 
   if (type === 'full') {
     box.innerHTML = `
-      <h3>Full Detail - $100</h3>
+      <h3>Full Detail - $100 ($80 first 3 visits)</h3>
       <p>✔ Complete Interior + Exterior Detail<br>
       ✔ Best Value Package<br>
       ✔ Makes your car look like new</p>
@@ -135,5 +135,3 @@ function showDetails(type) {
 }
 </script></body>
 </html>
-
-
