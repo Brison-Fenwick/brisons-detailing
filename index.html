@@ -3,45 +3,105 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Brison's Detailing</title>
+  <title>Brison's Precision Detailing</title>
   <style>
-    body { margin: 0; font-family: Arial, sans-serif; background: #000; color: #fff; }
-    header { background: #000; padding: 20px; text-align: center; border-bottom: 1px solid #333; }
-    header h1 { margin: 0; font-size: 2.5rem; color: gold; }
-    .hero { padding: 80px 20px; text-align: center; }
-    .hero h2 { color: gold; }
-    .buttons { text-align: center; margin: 20px; }
-    button { background: gold; color: black; border: none; padding: 12px 20px; margin: 10px; border-radius: 8px; cursor: pointer; font-weight: bold; }
-    .details { max-width: 800px; margin: 20px auto; background: #111; padding: 20px; border-radius: 12px; border: 1px solid #333; }
-    footer { text-align: center; padding: 20px; border-top: 1px solid #333; }
+    * { box-sizing: border-box; }
+    body { margin: 0; font-family: Arial, sans-serif; background: #0b0b0b; color: #fff; }
+
+    header {
+      display: flex; justify-content: space-between; align-items: center;
+      padding: 15px 30px; background: #000; border-bottom: 1px solid #222;
+    }
+
+    header h1 { color: gold; font-size: 1.8rem; margin: 0; }
+
+    nav a { color: #ccc; margin-left: 15px; text-decoration: none; }
+    nav a:hover { color: gold; }
+
+    .hero {
+      padding: 100px 20px; text-align: center;
+      background: linear-gradient(to right, #000, #111);
+    }
+
+    .hero h2 { font-size: 2.5rem; color: gold; margin-bottom: 10px; }
+    .hero p { color: #ccc; }
+
+    .cta-btn {
+      background: gold; color: black; border: none;
+      padding: 14px 28px; border-radius: 10px;
+      font-weight: bold; cursor: pointer; margin-top: 15px;
+    }
+
+    .section { max-width: 1000px; margin: auto; padding: 40px 20px; }
+
+    .buttons { text-align: center; margin-bottom: 20px; }
+
+    .service-btn {
+      background: #111; border: 1px solid #333;
+      color: white; padding: 14px 20px;
+      margin: 10px; border-radius: 10px;
+      cursor: pointer; transition: 0.2s;
+    }
+
+    .service-btn:hover { border-color: gold; color: gold; }
+
+    .details {
+      background: #111; padding: 25px;
+      border-radius: 12px; border: 1px solid #333;
+      margin-top: 20px;
+    }
+
+    .details h3 { color: gold; }
+
+    .contact {
+      margin-top: 40px; padding: 25px;
+      background: #111; border-radius: 12px; border: 1px solid #333;
+    }
+
+    .contact a { color: gold; text-decoration: none; }
+
+    footer {
+      text-align: center; padding: 20px;
+      border-top: 1px solid #222; margin-top: 40px;
+      color: #777;
+    }
   </style>
 </head>
 <body>
 
 <header>
-  <h1>Brison's Precision Detailing</h1>
+  <h1>Brison's Detailing</h1>
+  <nav>
+    <a href="#services">Services</a>
+    <a href="#contact">Contact</a>
+  </nav>
 </header>
 
 <section class="hero">
-  <h2>Where Detailing Matters</h2>
-  <p>Click a service below to see details</p>
+  <h2>Premium Car Detailing</h2>
+  <p>Professional results. Affordable prices. Sublette, Illinois.</p>
+  <p style="color:gold; font-weight:bold; margin-top:10px;">⭐ 5-Star Service • Highly Recommended</p>
+  <button class="cta-btn" onclick="window.location.href='sms:8156151025'">Text to Book</button>
 </section>
 
-<div class="buttons">
-  <button onclick="showDetails('inside')">Inside ($30)</button>
-  <button onclick="showDetails('outside')">Outside ($30)</button>
-  <button onclick="showDetails('full')">Full ($50)</button>
-</div>
+<section id="services" class="section">
+  <div class="buttons">
+    <button class="service-btn" onclick="showDetails('inside')">Inside - $30</button>
+    <button class="service-btn" onclick="showDetails('outside')">Outside - $30</button>
+    <button class="service-btn" onclick="showDetails('full')">Full - $50</button>
+  </div>
 
-<div id="details" class="details">
-  <p>Select a service to see details.</p>
-</div>
+  <div id="details" class="details">
+    <p>Select a service to see details.</p>
+  </div>
+</section>
 
-<section class="details">
+<section id="contact" class="section contact">
   <h3>Contact</h3>
-  <p>378 Van Orin Road, Sublette, Illinois 61367</p>
-  <p>Phone: <a href="tel:8156151025" style="color:gold;">815-615-1025</a></p>
-  <p>Email: <a href="mailto:brison.fenwick.12@gmail.com" style="color:gold;">brison.fenwick.12@gmail.com</a></p>
+  <p>📍 378 Van Orin Road, Sublette, Illinois 61367</p>
+  <p>📞 <a href="tel:8156151025">815-615-1025</a></p>
+  <p>📧 <a href="mailto:brison.fenwick.12@gmail.com">brison.fenwick.12@gmail.com</a></p>
+  <button class="cta-btn" onclick="window.location.href='sms:8156151025'">Book Now</button>
 </section>
 
 <footer>
@@ -55,21 +115,36 @@ function showDetails(type) {
   if (type === 'inside') {
     box.innerHTML = `
       <h3>Inside Detail - $30</h3>
-      <p>Vacuuming, window cleaning, cleaned dashboard and surfaces, carpet and floor mats, wipe down of everything.</p>
+      <p>✔ Vacuuming<br>
+      ✔ Window Cleaning<br>
+      ✔ Dashboard & Surfaces Cleaned<br>
+      ✔ Carpet & Floor Mats<br>
+      ✔ Full Interior Wipe Down</p>
+      <button class="cta-btn" onclick="window.location.href='sms:8156151025'">Book This</button>
     `;
   }
 
   if (type === 'outside') {
     box.innerHTML = `
       <h3>Outside Detail - $30</h3>
-      <p>Full hand-done wash, hand dried with shammy, scrubbed rims and tires, tire shined, waxed, cleaned windows and mirrors, trim and plastics restored, polished.</p>
+      <p>✔ Hand Wash<br>
+      ✔ Hand Dry (Shammy)<br>
+      ✔ Rims & Tires Scrubbed<br>
+      ✔ Tire Shine<br>
+      ✔ Waxed<br>
+      ✔ Windows & Mirrors Cleaned<br>
+      ✔ Trim Restored & Polished</p>
+      <button class="cta-btn" onclick="window.location.href='sms:8156151025'">Book This</button>
     `;
   }
 
   if (type === 'full') {
     box.innerHTML = `
       <h3>Full Detail - $50</h3>
-      <p>Includes everything from inside and outside detailing for a complete clean.</p>
+      <p>✔ Complete Interior + Exterior Detail<br>
+      ✔ Best Value Package<br>
+      ✔ Makes your car look like new</p>
+      <button class="cta-btn" onclick="window.location.href='sms:8156151025'">Book This</button>
     `;
   }
 }
@@ -77,3 +152,4 @@ function showDetails(type) {
 
 </body>
 </html>
+
